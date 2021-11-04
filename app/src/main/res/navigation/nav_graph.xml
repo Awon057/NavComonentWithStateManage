@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="wms.fun.molto.presentation.fragment.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_Home_to_ProcessFragment"
+            app:destination="@id/processFragment"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="wms.fun.molto.presentation.fragment.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile">
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="wms.fun.molto.presentation.fragment.HistoryFragment"
+        android:label="HistoryFragment" />
+
+    <fragment
+        android:id="@+id/processFragment"
+        android:name="wms.fun.molto.presentation.fragment.ProcessFragment"
+        tools:layout="@layout/fragment_process"
+        android:label="ProcessFragment">
+
+        <action
+            android:id="@+id/action_Home_to_Profile"
+            app:destination="@id/profileFragment"
+            />
+
+    </fragment>
+
+</navigation>
